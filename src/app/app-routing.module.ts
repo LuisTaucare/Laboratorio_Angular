@@ -10,6 +10,10 @@ const routes: Routes = [
     component: InicioComponent  
     
   },
+  { path:"",
+    component : InicioComponent
+
+  },
   {
     path: "nosotros",
 

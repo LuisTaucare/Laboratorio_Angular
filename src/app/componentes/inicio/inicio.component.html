@@ -59,14 +59,14 @@
                 <input 
                     type="number"
                     placeholder="Ingresa tu edad"
-                    formontrolName="edad"
+                    formControlName="edad"
                     required
                     >
                 <small *ngIf= "formularioReactivo.edad?.errors?.required && formularioReactivo.edad.touched">
                     La edad es requerido
                 </small>
                 
-                <small *ngIf= "formularioReactivo.edad?.errors?.minlength">
+                <small *ngIf= "formularioReactivo.edad?.errors?.min">
                     La edad debe ser mayor a 4 años
                 </small>
 
@@ -84,7 +84,7 @@
                 <input 
                     type="text"
                     placeholder="Ingresa tu Email"
-                    formcontrolName="email"
+                    formControlName="email"
                     required
                     >
                 <small *ngIf= "formularioReactivo.email?.errors?.required && formularioReactivo.email.touched">
@@ -104,7 +104,7 @@
                     class="btn btn-primary"
                     type="submit"
                     (click)="botonEnviar()"
-                    [disabled]= "formulario.valid"
+                    [disabled]= "!formulario.valid"
                     >Enviar</button>
 
             </div>
